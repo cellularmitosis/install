@@ -6,5 +6,5 @@ target=$1
 
 mkdir -p ~/.install/cache/$target
 cd ~/.install/cache/$target
-wget -N https://raw.githubusercontent.com/cellularmitosis/install/scripts/$target/install.sh
+wget -N https://raw.githubusercontent.com/cellularmitosis/install/master/scripts/$target/install.sh
 bash install.sh
