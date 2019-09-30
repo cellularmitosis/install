@@ -4,7 +4,12 @@ set -e -o pipefail -x
 
 target=$1
 
-mkdir -p ~/.install/cache/$target
-cd ~/.install/cache/$target
-wget -N https://raw.githubusercontent.com/cellularmitosis/install/master/scripts/$target/install.sh
+cd ~/github/cellularmitosis/install
+if [ "$INSTALL_ALREADY_DID_GIT_PULL" != "true" ]
+then
+    git pull
+    export INSTALL_ALREADY_DID_GIT_PULL="true"
+fi
+git pull
+cd $target
 bash install.sh
