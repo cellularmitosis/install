@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e -o pipefail
+set -e -o pipefail -x
 
 if which md5sum > /dev/null
 then
