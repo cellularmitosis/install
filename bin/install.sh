@@ -4,7 +4,7 @@ set -e -o pipefail -x
 
 target=$1
 
-mkdir -p ~/.install/cache
-cd ~/.install/cache
-wget https://raw.githubusercontent.com/cellularmitosis/install/scripts/$1/install.sh
+mkdir -p ~/.install/cache/$target
+cd ~/.install/cache/$target
+wget -N https://raw.githubusercontent.com/cellularmitosis/install/scripts/$target/install.sh
 bash install.sh
