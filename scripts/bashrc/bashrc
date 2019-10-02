@@ -1,0 +1,4 @@
+for rcfile in ~/.bashrc.d/*
+do
+    . $rcfile
+done
