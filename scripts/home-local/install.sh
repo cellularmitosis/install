@@ -7,3 +7,5 @@ if [ ! -e ~/bin ]
 then
     ln -sf ~/local/bin ~/bin
 fi
+
+mkdir -p ~/opt
