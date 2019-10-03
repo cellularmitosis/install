@@ -2,14 +2,12 @@
 
 set -e -o pipefail -x
 
-if which redshift > /dev/null
-then
-    exit 0
-fi
-
 install.sh home-local
 
-sudo apt-get install redshift
+if ! which redshift > /dev/null
+then
+    sudo apt-get install redshift
+fi
 
 cp -a redshift.sh ~/local/bin/
 
